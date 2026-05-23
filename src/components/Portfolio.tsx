@@ -34,7 +34,7 @@ function AmbientBackground() {
       >
         <div className="h-full w-full rounded-full" style={{
           background: "radial-gradient(circle, color-mix(in oklab, var(--primary) 45%, transparent), transparent 65%)"
-        }}/>
+        }} />
       </motion.div>
       <motion.div
         style={{ y: y2 }}
@@ -42,13 +42,13 @@ function AmbientBackground() {
       >
         <div className="h-full w-full rounded-full" style={{
           background: "radial-gradient(circle, color-mix(in oklab, var(--primary) 25%, transparent), transparent 70%)"
-        }}/>
+        }} />
       </motion.div>
       <div className="absolute inset-0 opacity-[0.04]" style={{
         backgroundImage: "linear-gradient(var(--foreground) 1px, transparent 1px), linear-gradient(90deg, var(--foreground) 1px, transparent 1px)",
         backgroundSize: "60px 60px",
         maskImage: "radial-gradient(ellipse at center, black 30%, transparent 75%)",
-      }}/>
+      }} />
     </div>
   );
 }
@@ -101,16 +101,16 @@ function Hero() {
         <motion.div initial="hidden" animate="show" variants={stagger}>
           <motion.div variants={fadeUp} className="mb-6 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/5 px-3 py-1 text-xs uppercase tracking-widest text-primary">
             <span className="relative flex h-2 w-2">
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary opacity-75"/>
-              <span className="relative inline-flex h-2 w-2 rounded-full bg-primary"/>
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary opacity-75" />
+              <span className="relative inline-flex h-2 w-2 rounded-full bg-primary" />
             </span>
             Open to work
           </motion.div>
 
           <motion.h1 variants={fadeUp}
             className="font-display text-[clamp(2.8rem,8vw,6.5rem)] font-bold leading-[0.95] tracking-tight">
-            <span className="block text-gradient-orange">AADHITHYAN</span>
-            <span className="block">R.</span>
+            <span className="block text-gradient-orange">Aadhithyan R</span>
+            <span className="block"></span>
           </motion.h1>
 
           <motion.p variants={fadeUp} className="mt-6 max-w-xl text-base text-muted-foreground md:text-lg">
@@ -123,11 +123,11 @@ function Hero() {
             <a href="#contact"
               className="group relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground transition-all hover:shadow-[0_0_50px_-10px_var(--primary)]">
               <DownloadIcon className="h-4 w-4" /> Download CV
-              <span className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/30 to-transparent transition-transform duration-700 group-hover:translate-x-full"/>
+              <span className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/30 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
             </a>
             <a href="#projects"
               className="glass inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-medium hover-glow">
-              View projects <ArrowRightIcon className="h-4 w-4"/>
+              View projects <ArrowRightIcon className="h-4 w-4" />
             </a>
           </motion.div>
 
@@ -154,7 +154,7 @@ function Hero() {
         >
           <div className="absolute -inset-10 rounded-full blur-3xl" style={{
             background: "radial-gradient(circle, color-mix(in oklab, var(--primary) 50%, transparent), transparent 60%)"
-          }}/>
+          }} />
           <div className="relative h-full w-full overflow-hidden rounded-[2rem] glow-ring">
             <FlipImage
               frontSrc={heroPortrait}
@@ -174,7 +174,7 @@ function Hero() {
             className="glass-strong absolute -bottom-6 -left-6 rounded-2xl px-4 py-3 text-xs"
           >
             <div className="flex items-center gap-2 text-primary">
-              <SparkIcon className="h-4 w-4"/> AI · Security · Cinema
+              <SparkIcon className="h-4 w-4" /> AI · Security · Cinema
             </div>
           </motion.div>
         </motion.div>
@@ -191,7 +191,7 @@ function SectionHeader({ tag, title, sub }: { tag: string; title: string; sub?: 
       className="mb-14 max-w-3xl"
     >
       <motion.div variants={fadeUp} className="mb-3 inline-flex items-center gap-2 text-xs uppercase tracking-[0.3em] text-primary">
-        <span className="h-px w-8 bg-primary"/> {tag}
+        <span className="h-px w-8 bg-primary" /> {tag}
       </motion.div>
       <motion.h2 variants={fadeUp} className="text-4xl font-semibold tracking-tight md:text-5xl">
         {title}
@@ -253,23 +253,33 @@ function About() {
 
 // ---------- Skills ----------
 const skillGroups: { title: string; items: { name: string; level: number }[] }[] = [
-  { title: "Programming", items: [
-    { name: "Python", level: 90 }, { name: "C", level: 75 }, { name: "Java", level: 70 },
-  ]},
-  { title: "Web", items: [
-    { name: "HTML", level: 92 }, { name: "CSS", level: 88 }, { name: "React", level: 82 }, { name: "Node.js", level: 75 },
-  ]},
-  { title: "Cybersecurity", items: [
-    { name: "Kali Linux", level: 80 }, { name: "Burp Suite", level: 72 }, { name: "Wireshark", level: 70 }, { name: "Nmap", level: 78 },
-  ]},
-  { title: "Creative", items: [
-    { name: "Photoshop", level: 85 }, { name: "Premiere Pro", level: 82 }, { name: "Lightroom", level: 80 },
-    { name: "CapCut", level: 88 }, { name: "After Effects", level: 72 }, { name: "DaVinci Resolve", level: 78 },
-  ]},
-  { title: "Tools", items: [
-    { name: "Git", level: 86 }, { name: "GitHub", level: 88 }, { name: "Linux", level: 82 },
-    { name: "VS Code", level: 92 }, { name: "Firebase", level: 75 }, { name: "MongoDB", level: 78 },
-  ]},
+  {
+    title: "Programming", items: [
+      { name: "Python", level: 90 }, { name: "C", level: 75 }, { name: "Java", level: 70 },
+    ]
+  },
+  {
+    title: "Web", items: [
+      { name: "HTML", level: 92 }, { name: "CSS", level: 88 }, { name: "React", level: 82 }, { name: "Node.js", level: 75 },
+    ]
+  },
+  {
+    title: "Cybersecurity", items: [
+      { name: "Kali Linux", level: 80 }, { name: "Burp Suite", level: 72 }, { name: "Wireshark", level: 70 }, { name: "Nmap", level: 78 },
+    ]
+  },
+  {
+    title: "Creative", items: [
+      { name: "Photoshop", level: 85 }, { name: "Premiere Pro", level: 82 }, { name: "Lightroom", level: 80 },
+      { name: "CapCut", level: 88 }, { name: "After Effects", level: 72 }, { name: "DaVinci Resolve", level: 78 },
+    ]
+  },
+  {
+    title: "Tools", items: [
+      { name: "Git", level: 86 }, { name: "GitHub", level: 88 }, { name: "Linux", level: 82 },
+      { name: "VS Code", level: 92 }, { name: "Firebase", level: 75 }, { name: "MongoDB", level: 78 },
+    ]
+  },
 ];
 
 function SkillBar({ name, level }: { name: string; level: number }) {
@@ -338,7 +348,7 @@ const projects: Project[] = [
     github: "https://github.com/aadhiiiiiiiii",
   },
   {
-    index: "02", title: "Epic24: The Time Capsule", status: "Ongoing",
+    index: "02", title: "Epic24: The Time Capsule", status: "Completed",
     description: "A digital time capsule platform where users can preserve memories, messages, and digital moments for future access.",
     features: ["Memory preservation", "Interactive web experience", "Responsive UI", "Cloud deployment"],
     tech: ["React", "Node.js", "Firebase", "MongoDB"],
@@ -360,8 +370,8 @@ function ProjectCard({ p, i }: { p: Project; i: number }) {
       <div className="grid gap-2 md:grid-cols-[1.1fr_1.4fr]">
         <div className="relative overflow-hidden rounded-2xl">
           <img src={p.image} alt={p.title} loading="lazy" width={1024} height={640}
-            className="h-full w-full object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-110"/>
-          <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent"/>
+            className="h-full w-full object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-110" />
+          <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
           <div className="absolute left-4 top-4 glass rounded-full px-3 py-1 text-xs">
             <span className="text-primary">{p.index}</span>
           </div>
@@ -370,7 +380,7 @@ function ProjectCard({ p, i }: { p: Project; i: number }) {
           <div className="mb-3 flex items-center justify-between">
             <h3 className="text-2xl font-semibold tracking-tight md:text-3xl">{p.title}</h3>
             <span className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/5 px-3 py-1 text-[10px] uppercase tracking-widest text-primary">
-              <span className="h-1.5 w-1.5 rounded-full bg-primary animate-pulse"/>{p.status}
+              <span className="h-1.5 w-1.5 rounded-full bg-primary animate-pulse" />{p.status}
             </span>
           </div>
           <p className="text-sm leading-relaxed text-muted-foreground">{p.description}</p>
@@ -378,7 +388,7 @@ function ProjectCard({ p, i }: { p: Project; i: number }) {
           <ul className="mt-5 grid grid-cols-1 gap-2 sm:grid-cols-2">
             {p.features.map((f) => (
               <li key={f} className="flex items-start gap-2 text-xs text-muted-foreground">
-                <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-primary"/>{f}
+                <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-primary" />{f}
               </li>
             ))}
           </ul>
@@ -392,12 +402,12 @@ function ProjectCard({ p, i }: { p: Project; i: number }) {
           <div className="mt-6 flex flex-wrap items-center gap-3 text-sm">
             <a href={p.github} target="_blank" rel="noreferrer"
               className="inline-flex items-center gap-2 rounded-full border border-white/10 px-4 py-2 transition-colors hover:border-primary/50 hover:text-primary">
-              <GithubIcon className="h-4 w-4"/> GitHub
+              <GithubIcon className="h-4 w-4" /> GitHub
             </a>
             {p.live && (
               <a href={p.live} target="_blank" rel="noreferrer"
                 className="inline-flex items-center gap-2 rounded-full bg-primary px-4 py-2 text-primary-foreground transition-all hover:shadow-[0_0_30px_-5px_var(--primary)]">
-                <ExternalIcon className="h-4 w-4"/> Live site
+                <ExternalIcon className="h-4 w-4" /> Live site
               </a>
             )}
           </div>
@@ -412,7 +422,7 @@ function Projects() {
     <section id="projects" className="relative px-6 py-28 md:px-10">
       <div className="mx-auto max-w-7xl">
         <SectionHeader tag="Projects" title="Selected work."
-          sub="Two ongoing builds at the intersection of AI, identity, and memory."/>
+          sub="Two ongoing builds at the intersection of AI, identity, and memory." />
         <div className="space-y-8">
           {projects.map((p, i) => <ProjectCard key={p.title} p={p} i={i} />)}
         </div>
@@ -428,7 +438,7 @@ function CertActivities() {
   return (
     <section id="certifications" className="relative px-6 py-28 md:px-10">
       <div className="mx-auto max-w-7xl">
-        <SectionHeader tag="Beyond Code" title="Certifications, activities & languages."/>
+        <SectionHeader tag="Beyond Code" title="Certifications, activities & languages." />
         <div className="grid gap-6 lg:grid-cols-3">
           {/* Cert */}
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
@@ -436,10 +446,10 @@ function CertActivities() {
             className="glass relative overflow-hidden rounded-3xl p-7 hover-glow">
             <div className="absolute -top-20 -right-20 h-48 w-48 rounded-full blur-3xl" style={{
               background: "radial-gradient(circle, color-mix(in oklab, var(--primary) 45%, transparent), transparent 70%)"
-            }}/>
+            }} />
             <div className="relative">
               <div className="mb-4 inline-flex items-center gap-2 text-xs uppercase tracking-[0.3em] text-primary">
-                <span className="h-px w-6 bg-primary"/> Certification
+                <span className="h-px w-6 bg-primary" /> Certification
               </div>
               <h3 className="text-2xl font-semibold">Digital 101</h3>
               <p className="mt-1 text-sm text-primary">FutureSkills Prime</p>
@@ -461,12 +471,12 @@ function CertActivities() {
             transition={{ duration: 0.8, delay: 0.1 }}
             className="glass rounded-3xl p-7 hover-glow">
             <div className="mb-4 inline-flex items-center gap-2 text-xs uppercase tracking-[0.3em] text-primary">
-              <span className="h-px w-6 bg-primary"/> Activities
+              <span className="h-px w-6 bg-primary" /> Activities
             </div>
             <ul className="space-y-3 text-sm">
               {activities.map((a) => (
                 <li key={a} className="flex items-center gap-3">
-                  <span className="h-1.5 w-1.5 rounded-full bg-primary"/>
+                  <span className="h-1.5 w-1.5 rounded-full bg-primary" />
                   <span className="text-foreground/90">{a}</span>
                 </li>
               ))}
@@ -478,7 +488,7 @@ function CertActivities() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="glass rounded-3xl p-7 hover-glow">
             <div className="mb-4 inline-flex items-center gap-2 text-xs uppercase tracking-[0.3em] text-primary">
-              <span className="h-px w-6 bg-primary"/> Languages
+              <span className="h-px w-6 bg-primary" /> Languages
             </div>
             <div className="space-y-4">
               {languages.map((l) => (
@@ -512,14 +522,14 @@ function Contact() {
           className="glass-strong relative overflow-hidden rounded-[2rem] p-10 md:p-16">
           <div className="absolute -top-32 -left-32 h-[400px] w-[400px] rounded-full blur-3xl" style={{
             background: "radial-gradient(circle, color-mix(in oklab, var(--primary) 40%, transparent), transparent 70%)"
-          }}/>
+          }} />
           <div className="absolute -bottom-32 -right-32 h-[400px] w-[400px] rounded-full blur-3xl" style={{
             background: "radial-gradient(circle, color-mix(in oklab, var(--primary) 30%, transparent), transparent 70%)"
-          }}/>
+          }} />
           <div className="relative grid gap-12 lg:grid-cols-[1fr_1fr] lg:items-center">
             <div>
               <div className="mb-3 inline-flex items-center gap-2 text-xs uppercase tracking-[0.3em] text-primary">
-                <span className="h-px w-8 bg-primary"/> Contact
+                <span className="h-px w-8 bg-primary" /> Contact
               </div>
               <h2 className="text-4xl font-semibold tracking-tight md:text-6xl">
                 Let's build something <span className="text-gradient-orange">cinematic</span>.
@@ -529,7 +539,7 @@ function Contact() {
               </p>
               <a href="mailto:aadhithyan935@gmail.com"
                 className="mt-8 inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground transition-all hover:shadow-[0_0_50px_-10px_var(--primary)]">
-                <MailIcon className="h-4 w-4"/> Start a conversation
+                <MailIcon className="h-4 w-4" /> Start a conversation
               </a>
             </div>
             <div className="space-y-3">
@@ -537,13 +547,13 @@ function Contact() {
                 const Inner = (
                   <div className="glass flex items-center gap-4 rounded-2xl p-4 transition-all hover:border-primary/40 hover:bg-white/[0.04]">
                     <div className="grid h-11 w-11 place-items-center rounded-xl bg-primary/10 text-primary">
-                      <Icon className="h-5 w-5"/>
+                      <Icon className="h-5 w-5" />
                     </div>
                     <div className="min-w-0 flex-1">
                       <div className="text-[10px] uppercase tracking-widest text-muted-foreground">{label}</div>
                       <div className="truncate text-sm text-foreground/90">{value}</div>
                     </div>
-                    {href && <ArrowRightIcon className="h-4 w-4 text-muted-foreground"/>}
+                    {href && <ArrowRightIcon className="h-4 w-4 text-muted-foreground" />}
                   </div>
                 );
                 return href ? (
